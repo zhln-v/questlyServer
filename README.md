@@ -29,8 +29,10 @@
 
 ### 1. Клонируйте репозиторий
 
-git clone https://github.com/your-username/questly.git  
-cd questly
+```bash
+    git clone https://github.com/your-username/questly.git
+    cd questly
+```
 
 ### 2. Запуск приложения в Docker
 
@@ -40,13 +42,17 @@ cd questly
 
     Используйте команду `docker-compose` для запуска всех сервисов, указанных в `docker-compose.yml`:
 
+```bash
 docker-compose up -d
+```
 
 2. **Миграции и начальная настройка**
 
     После того как контейнеры запустятся, выполните миграции базы данных:
 
+```bash
 docker-compose exec app php artisan migrate
+```
 
 3. **Запуск приложения**
 
@@ -60,21 +66,27 @@ docker-compose exec app php artisan migrate
 
     Переключитесь на ветку `develop` и создайте новую ветку для разработки:
 
-git checkout develop  
+```bash
+git checkout develop
 git checkout -b feature/1234-новая-фича
+```
 
 2. **Работа над задачей**
 
     Вносите изменения в код, коммитьте их:
 
-git add .  
+```bash
+git add .
 git commit -m "Описание изменений"
+```
 
 3. **Отправка изменений**
 
     После завершения работы над фичей отправьте ветку в удалённый репозиторий:
 
+```bash
 git push origin feature/1234-новая-фича
+```
 
 4. **Создание Pull Request**
 
@@ -84,8 +96,12 @@ git push origin feature/1234-новая-фича
 
 Если у вас возникнут проблемы с настройкой Docker или базы данных, проверьте логи с помощью:
 
+```bash
 docker-compose logs
+```
 
 Для остановки контейнеров:
 
+```bash
 docker-compose down
+```
